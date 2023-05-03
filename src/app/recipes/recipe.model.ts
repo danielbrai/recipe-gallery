@@ -1,13 +1,6 @@
 export class Recipe {
 
-    private _name: string;
-    private _description: string;
-    private _imagePath: string;
-
-    constructor(name: string, description: string, imagePath: string) {
-        this._name = name;
-        this._description = description;
-        this._imagePath = imagePath;
+    constructor(private _name: string, private _description: string, private _imagePath: string) {
     }
 
     public get name(): string {
