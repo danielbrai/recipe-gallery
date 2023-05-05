@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (linkClickedEmitter)="onLinkClick($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping></app-shopping>
+      <app-recipes *ngIf="shouldShowRecipeComponent()"></app-recipes>
+      <app-shopping *ngIf="shouldShowShoppingListComponent()"></app-shopping>
     </div>
   </div>
 </div>
