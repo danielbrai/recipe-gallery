@@ -1,6 +1,8 @@
+import { Ingredient } from "./ingredient.model";
+
 export class Recipe {
 
-    constructor(private _name: string, private _description: string, private _imagePath: string) {
+    constructor(private _name: string, private _description: string, private _imagePath: string, private _ingredients: Ingredient[]) {
     }
 
     public get name(): string {
@@ -13,6 +15,10 @@ export class Recipe {
 
     public get imagePath(): string {
         return this._imagePath;
+    }
+
+    public get ingredients(): Ingredient[] {
+        return this._ingredients;
     }
 
 }

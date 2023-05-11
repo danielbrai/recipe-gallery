@@ -12,7 +12,6 @@
         <app-recipe-item
          *ngFor="let recipe of recipes" 
          [recipe]="recipe"
-         (recipeEventEmitter)="onSelectRecipe(recipe)"
         ></app-recipe-item>
     </div>
 </div>
